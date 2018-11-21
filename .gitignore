@@ -1,0 +1,6 @@
+node_modules
+dist
+*.css
+src/typings/wx.d.ts
+src/.vscode/settings.json
+src/jsconfig.json
