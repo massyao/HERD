@@ -1,23 +1,33 @@
 {
-	"name": "GlobeEye",
-	"version": "1.0.0",
-	"description": "A geospatial representation of tweet data collected from the twitter stream api",
-	"author": {
-		"name": "massyao",
-		"email": "massyao@126.com",
-		"url": "http://globe-eye.cf"
-	},
-	"license": "MIT",
-	"scripts": {
-		"start": "node app.js"
-	},
-	"dependencies": {
-		"compress": "^0.99.0",
-		"cors": "^2.8.4",
-		"express": "^4.16.4",
-		"fs": "0.0.1-security",
-		"json": "^9.0.6",
-		"socket.io": "^2.1.0",
-		"twit": "^2.2.11"
-	}
+  "name": "HERD",
+  "description": "",
+  "version": "1.0.0",
+  "author": {
+    "name": "massyao",
+    "email": "massyao@126.com",
+    "url": "http://globe-eye.cf"
+  },
+  "scripts": {
+    "build": "gulp --gulpfile ./build.ts",
+    "start": "node app.js"
+  },
+  "devDependencies": {
+    "@wasm/studio-utils": "*",
+    "gulp": "~3.9.1",
+    "ts-node": "~5.0.0",
+    "typescript": "~2.7.2"
+  },
+  "wasmStudio": {
+    "name": "C-to-WASM-demo",
+    "description": "Distribute computing task to web which fulfill by using Webassembly and Worker",
+    "icon": "c-lang-file-icon"
+  },
+  "dependencies": {
+    "compress": "^0.99.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "json": "^9.0.6",
+    "socket.io": "^2.1.1"
+  }
 }
