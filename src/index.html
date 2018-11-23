@@ -10,6 +10,16 @@
 </head>
 <body>
   <span id="container"></span>
-  <script src="./main.js"></script>
+  <script>
+    fetch('./main.wasm')
+      .then(response =>response.arrayBuffer())
+      .then(bytes => WebAssembly.instantiate(bytes))
+      .then(results => {
+        instance = results.instance;
+        console.log('instance.exports.main', instance.exports.main)
+        document.getElementById("container").textContent = instance.exports.main();
+      })
+      .catch(console.error);
+  </script>
 </body>
 </html>
